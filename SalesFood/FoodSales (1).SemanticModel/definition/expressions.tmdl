@@ -1,0 +1,16 @@
+/// Description: Current deployment environment (DEV, UAT, or PROD)
+expression Environment = "DEV" meta [IsParameterQuery=true, List={"DEV", "UAT", "PROD"}, DefaultValue="DEV", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 9279bbe1-fa6c-46f0-975a-079dbe9f4e74
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+/// Database name based on environment
+expression DbName = "adventureworks-dev-workspace-id" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: f1a26163-73a4-4eba-9225-34f75d756ccf
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
